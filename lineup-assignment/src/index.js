@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+const express = require('express');
+const http = require('http')
+const socketio = require('socket.io')
+
+const app = express();
+const server = http.createServer(app);
+const io = socketio(server);
 
 ReactDOM.render(<App />, document.querySelector("#root"));
 
